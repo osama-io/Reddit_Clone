@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:reddit_clone/theme/palette.dart';
+
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      
-        title: 'Reddit Clone',
-          //theme: Pallete.
-        home: Placeholder(
-          child: Text("data"),
-        ),
-         );
-        
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Reddit Clone',
+      theme: Palette.lightModeAppTheme,
+      home: const Scaffold(
+        body: Placeholder(),
+      ),
+    );
   }
 }
